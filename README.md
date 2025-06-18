@@ -263,6 +263,7 @@ keymap.set("[mode]", "<leader>[keys]", "<cmd>[command]<cr>")
 | `n`  | `<leader>d`           | Show diagnostic in floating window             |
 | `n`  | `<leader>q`           | Open diagnostic location list                  |
 | `v`  | `J/K`                 | Move lines up/down                             |
+| `n`  | `<leader>nh`          | Clear search highlight                         |
 
 ### Plugins keymaps
 
