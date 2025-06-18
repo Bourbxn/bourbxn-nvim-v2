@@ -2,6 +2,7 @@ return {
   'nvimdev/dashboard-nvim',
   event = 'VimEnter',
   config = function()
+    local lazy_stats = require('lazy').stats()
     require('dashboard').setup {
       theme = 'doom',
       config = {
@@ -76,7 +77,7 @@ return {
           [[                                                                       ]],
           [[                                                                       ]],
           [[                                                                       ]],
-          'neovim loaded 64 packages',
+          'neovim loaded ' .. lazy_stats.count .. ' plugins',
         }, --your footer
       },
     }
