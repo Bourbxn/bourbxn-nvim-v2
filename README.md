@@ -20,11 +20,11 @@ You can install, customize, and extend this configuration as much as you like. I
 
 ## Showcase
 
-![image](https://github.com/user-attachments/assets/c0ce853c-55a9-4fb2-a74a-9fb7c33238aa)
-![image](https://github.com/user-attachments/assets/3e8cfaa3-61ad-4ed2-8bac-6bc96dd7bbbd)
-![image](https://github.com/user-attachments/assets/58633cd2-af20-46df-aaf9-f10ece3329d3)
-![image](https://github.com/user-attachments/assets/ff10f243-d6a3-49d7-8912-dd4018081a5c)
-![image](https://github.com/user-attachments/assets/f7bca656-d2d1-4309-bf8e-53e2232592c1)
+![image](https://github.com/user-attachments/assets/d4b0c97c-51e4-4637-88c4-cbd6a4fc7a95)
+![image](https://github.com/user-attachments/assets/aa83d1bc-3c5f-46f4-bbd1-2af4e245f2a5)
+![image](https://github.com/user-attachments/assets/94782ef0-9b36-4708-b3f3-b35f321cba68)
+![image](https://github.com/user-attachments/assets/6205c669-33e3-4239-9dfe-7faaccdee46d)
+
 
 <br>
 
