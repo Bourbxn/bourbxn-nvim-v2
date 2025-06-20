@@ -108,13 +108,13 @@ scoop install neovim
 MacOS/Linux
 
 ```bash
-git clone git@github.com:Bourbxn/bourbxn-nvim-v2.git ~/.config/nvim
+git clone https://github.com/Bourbxn/bourbxn-nvim-v2.git ~/.config/nvim
 ```
 
 Windows
 
 ```bash
-git clone git@github.com:Bourbxn/bourbxn-nvim-v2.git $HOME\AppData\Local\nvim
+git clone https://github.com/Bourbxn/bourbxn-nvim-v2.git $HOME\AppData\Local\nvim
 ```
 
 ## Uninstall
