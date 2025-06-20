@@ -33,6 +33,7 @@ You can install, customize, and extend this configuration as much as you like. I
 | Plugin                                                                                    | Description                                                      |
 | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)                             | Buffer/tab line                                                  |
+| [catppuccin](https://github.com/catppuccin/nvim)                                          | Theme/colorscheme                                                |
 | [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)                                       | Completion source (buffer)                                       |
 | [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)                                   | LSP source for nvim-cmp                                          |
 | [cmp-path](https://github.com/hrsh7th/cmp-path)                                           | Completion source (filesystem paths)                             |
@@ -75,7 +76,6 @@ You can install, customize, and extend this configuration as much as you like. I
 | [telescope-ui-select.nvim](https://github.com/nvim-telescope/telescope-ui-select.nvim)    | UI picker for Telescope                                          |
 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)                        | Fuzzy finder                                                     |
 | [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)                         | Highlight and manage TODOs                                       |
-| [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)                               | Theme/colorscheme                                                |
 | [vim-bbye](https://github.com/moll/vim-bbye)                                              | Buffer closing without closing window                            |
 | [vim-fugitive](https://github.com/tpope/vim-fugitive)                                     | Git integration                                                  |
 | [vim-rhubarb](https://github.com/tpope/vim-rhubarb)                                       | GitHub extension for fugitive                                    |

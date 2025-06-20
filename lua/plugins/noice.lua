@@ -32,6 +32,10 @@ return {
       },
     }
 
+    require('notify').setup {
+      background_colour = '#1e1e2e',
+    }
+
     vim.keymap.set('n', '<leader>z', ':Noice dismiss<cr>')
   end,
 }
