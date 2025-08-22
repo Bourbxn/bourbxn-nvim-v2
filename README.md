@@ -3,7 +3,7 @@
 <div align="center">
 	<a href="#showcase">Showcase</a>
   <span> • </span>
-    	<a href="#languages-support">Languages Support</a>
+    	<a href="#language-support">Languages Support</a>
   <span> • </span>
     	<a href="#plugins-list">Plugins List</a>
    <span> • </span>
@@ -361,4 +361,5 @@ keymap.set("[mode]", "<leader>[keys]", "<cmd>[command]<cr>")
  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/86193685?v=4&h=80&w=80&fit=cover&mask=circle&maxage=7d"/>
 </a>
 </span>
+
 
