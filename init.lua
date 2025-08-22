@@ -32,4 +32,6 @@ require('lazy').setup {
   require 'plugins.noice',
   require 'plugins.smear-cursor',
   require 'plugins.trouble',
+  require 'plugins.java',
+  require 'plugins.diagnostic',
 }

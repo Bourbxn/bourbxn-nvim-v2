@@ -48,8 +48,38 @@ return {
           enabled = true,
           indentscope_color = '',
         },
-        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+        flash = true,
+        indent_blankline = {
+          enabled = true,
+          scope_color = '', -- catppuccin color (eg. `lavender`) Default: text
+          colored_indent_levels = false,
+        },
+        noice = false,
+        native_lsp = {
+          enabled = true,
+          virtual_text = {
+            errors = { 'italic' },
+            hints = { 'italic' },
+            warnings = { 'italic' },
+            information = { 'italic' },
+            ok = { 'italic' },
+          },
+          underlines = {
+            errors = { 'underline' },
+            hints = { 'underline' },
+            warnings = { 'underline' },
+            information = { 'underline' },
+            ok = { 'underline' },
+          },
+          inlay_hints = {
+            background = true,
+          },
+        },
       },
+      telescope = {
+        enabled = true,
+      },
+      lsp_trouble = false,
     }
 
     -- setup must be called before loading
