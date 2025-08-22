@@ -3,6 +3,8 @@
 <div align="center">
 	<a href="#showcase">Showcase</a>
   <span> • </span>
+    	<a href="#languages-support">Languages Support</a>
+  <span> • </span>
     	<a href="#plugins-list">Plugins List</a>
    <span> • </span>
 	<a href="#install">Install</a>
@@ -27,6 +29,12 @@ You can install, customize, and extend this configuration as much as you like. I
 
 
 <br>
+
+## Language Support
+| Language                                                                                  | Status                                                           |
+| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Java                            															| ✅                                                               |
+| Golang                            														| ✅                                                               |
 
 ## Plugins List
 
@@ -84,6 +92,12 @@ You can install, customize, and extend this configuration as much as you like. I
 | [which-key.nvim](https://github.com/folke/which-key.nvim)                                 | Keybinding helper                                                |
 | [hererocks](https://github.com/luarocks/hererocks)                                        | Python environment (required for some LSPs)                      |
 | [trouble.nvim](https://github.com/folke/trouble.nvim)                                     | LSP diagnostics panel, bound to `<leader>dX`, `<leader>cl`, etc. |
+| [nvim-java](https://github.com/nvim-java/nvim-java)                                       | Painless Java in Neovim 										   |
+| [tiny-inline-diagnostic.nvim](https://github.com/rachartier/tiny-inline-diagnostic.nvim)  | PDisplay diagnostic messages where the cursor is				   |
+
+> [!IMPORTANT]
+> - Mason has already installed some languages, and for some languages, errors may occur during installation if they are not available on your machine, such as Golang and Java. If you don’t use them, it’s recommended to remove them.
+> - The `nvim-java` plugin has a JDK version configured, which may cause errors when opening Neovim. If you don’t need it, you should remove the plugin and also delete its configuration in `lsp.lua`.
 
 <br>
 
@@ -319,22 +333,22 @@ keymap.set("[mode]", "<leader>[keys]", "<cmd>[command]<cr>")
 | `n`      | `<leader>e`        | Toggle file explorer                    | neo-tree.nvim      |
 | `n`      | `<leader>ngs`      | Show git status in float                | neo-tree.nvim      |
 | `n`      | `<leader>z`        | Dismiss notifications                   | noice.nvim         |
-| n        | `<leader>hs`       | Stage current hunk                      | gitsigns.nvim      |
-| n        | `<leader>hr`       | Reset current hunk                      | gitsigns.nvim      |
-| v        | `<leader>hs`       | Stage selected hunk                     | gitsigns.nvim      |
-| v        | `<leader>hr`       | Reset selected hunk                     | gitsigns.nvim      |
-| n        | `<leader>hS`       | Stage entire buffer                     | gitsigns.nvim      |
-| n        | `<leader>hR`       | Reset entire buffer                     | gitsigns.nvim      |
-| n        | `<leader>hp`       | Preview hunk                            | gitsigns.nvim      |
-| n        | `<leader>hi`       | Inline preview hunk                     | gitsigns.nvim      |
-| n        | `<leader>hb`       | Show full blame for current line        | gitsigns.nvim      |
-| n        | `<leader>hd`       | Show diff for current file              | gitsigns.nvim      |
-| n        | `<leader>hD`       | Show diff against previous commit (`~`) | gitsigns.nvim      |
-| n        | `<leader>hQ`       | Set quickfix list for all hunks         | gitsigns.nvim      |
-| n        | `<leader>hq`       | Set quickfix list for current buffer    | gitsigns.nvim      |
-| n        | `<leader>tb`       | Toggle current line blame               | gitsigns.nvim      |
-| n        | `<leader>tw`       | Toggle word diff                        | gitsigns.nvim      |
-| o/x      | `ih`               | Select hunk as text object              | gitsigns.nvim      |
+| `n`      | `]h`               | Next Hunk (or `]c` in diff mode)        | gitsigns.nvim      |
+| `n`      | `[h`               | Prev Hunk (or `[c` in diff mode)        | gitsigns.nvim      |
+| `n`      | `]H`               | Jump to Last Hunk                       | gitsigns.nvim      |
+| `n`      | `[H`               | Jump to First Hunk                      | gitsigns.nvim      |
+| `n,v`    | `<leader>ghs`      | Stage Hunk                              | gitsigns.nvim      |
+| `n,v`    | `<leader>ghr`      | Reset Hunk                              | gitsigns.nvim      |
+| `n`      | `<leader>ghS`      | Stage Buffer                            | gitsigns.nvim      |
+| `n`      | `<leader>ghu`      | Undo Stage Hunk                         | gitsigns.nvim      |
+| `n`      | `<leader>ghR`      | Reset Buffer                            | gitsigns.nvim      |
+| `n`      | `<leader>ghp`      | Preview Hunk Inline                     | gitsigns.nvim      |
+| `n`      | `<leader>ghb`      | Blame Line (full)                       | gitsigns.nvim      |
+| `n`      | `<leader>ghB`      | Blame Buffer                            | gitsigns.nvim      |
+| `n`      | `<leader>ghd`      | Diff This                               | gitsigns.nvim      |
+| `n`      | `<leader>ghD`      | Diff This ~                             | gitsigns.nvim      |
+| `o,x`    | `ih`               | Select Hunk                             | gitsigns.nvim      |
+
 
 <br>
 <br>
@@ -347,3 +361,4 @@ keymap.set("[mode]", "<leader>[keys]", "<cmd>[command]<cr>")
  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/86193685?v=4&h=80&w=80&fit=cover&mask=circle&maxage=7d"/>
 </a>
 </span>
+
