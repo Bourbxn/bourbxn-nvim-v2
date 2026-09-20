@@ -44,3 +44,6 @@ vim.opt.formatoptions:remove { 'c', 'r', 'o' } -- Don't insert the current comme
 vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- Separate Vim plugins from Neovim in case Vim still in use (default: includes this path if Vim is installed)
 vim.o.laststatus = 3 -- Set statusline always at the bottom and full-width
 vim.o.winborder = 'rounded' -- Set border for popup window
+vim.opt.fillchars = { eob = ' ' } --  Remove '~'
+vim.g.deprecation_warnings = false -- Disable warning deprecated
+vim.deprecate = function() end
