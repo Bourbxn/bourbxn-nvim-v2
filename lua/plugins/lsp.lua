@@ -204,7 +204,10 @@ return {
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
-      ts_ls = {}, -- tsserver is deprecated
+      ts_ls = {
+        filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
+        root_dir = require('lspconfig.util').root_pattern('package.json', 'tsconfig.json', '.git'),
+      }, -- tsserver is deprecated
       ruff = {},
       pylsp = {
         settings = {
@@ -256,11 +259,6 @@ return {
         },
       },
     }
-
-    require('java').setup {
-      -- Your custom jdtls settings goes here
-    }
-
     require('lspconfig').jdtls.setup {
       settings = {
         java = {
@@ -269,11 +267,16 @@ return {
               {
                 name = '8.0.452-amzn',
                 path = '/Users/jakkapat.pai/.sdkman/candidates/java/8.0.452-amzn',
-                default = true,
+                default = false,
               },
               {
                 name = '17.0.15-tem',
                 path = '/Users/jakkapat.pai/.sdkman/candidates/java/17.0.15-tem',
+                default = false,
+              },
+              {
+                name = '17.0.15-tem',
+                path = '/Users/jakkapat.pai/.sdkman/candidates/java/current',
                 default = true,
               },
             },

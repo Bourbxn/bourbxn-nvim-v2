@@ -9,6 +9,7 @@ return { -- Highlight, edit, and navigate code
       'python',
       'javascript',
       'typescript',
+      'tsx',
       'vimdoc',
       'vim',
       'regex',

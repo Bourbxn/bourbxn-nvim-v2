@@ -1,18 +1,10 @@
 return {
   'nvim-lualine/lualine.nvim',
   config = function()
-    local mode = {
-      'mode',
-      fmt = function(str)
-        return ' ' .. str
-        -- return ' ' .. str:sub(1, 1) -- displays only the first character of the mode
-      end,
-    }
-
     local filename = {
       'filename',
       file_status = true, -- displays file status (readonly status, modified status)
-      path = 0, -- 0 = just filename, 1 = relative path, 2 = absolute path
+      path = 0,           -- 0 = just filename, 1 = relative path, 2 = absolute path
     }
 
     local hide_in_width = function()
@@ -21,18 +13,24 @@ return {
 
     local diagnostics = {
       'diagnostics',
-      sources = { 'nvim_diagnostic' },
-      sections = { 'error', 'warn' },
-      symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' },
-      colored = false,
-      update_in_insert = false,
-      always_visible = false,
+      sources = { 'nvim_diagnostic', 'nvim_lsp' },
+      sections = { 'error', 'warn', 'info', 'hint' },
+      diagnostics_color = {
+        error = 'DiagnosticError', -- Changes diagnostics' error color.
+        warn = 'DiagnosticWarn',   -- Changes diagnostics' warn color.
+        info = 'DiagnosticInfo',   -- Changes diagnostics' info color.
+        hint = 'DiagnosticHint',   -- Changes diagnostics' hint color.
+      },
+      symbols = { error = ' ', warn = ' ', info = ' ', hint = '󰌵' },
+      colored = true,           -- Displays diagnostics status in color if set to true.
+      update_in_insert = false, -- Update diagnostics in insert mode.
+      always_visible = false,   -- Show diagnostics even if there are none.
       cond = hide_in_width,
     }
 
     local diff = {
       'diff',
-      colored = false,
+      colored = true,
       symbols = { added = ' ', modified = ' ', removed = ' ' }, -- changes diff symbols
       cond = hide_in_width,
     }
@@ -41,32 +39,31 @@ return {
       options = {
         icons_enabled = true,
         theme = 'catppuccin', -- Set theme based on environment variable
-        -- Some useful glyphs:
-        -- https://www.nerdfonts.com/cheat-sheet
-        --        
-        section_separators = { left = '', right = '' },
-        component_separators = { left = '', right = '' },
+        theme = bubbles_theme,
+        component_separators = '',
+        section_separators = { left = '', right = '' },
         disabled_filetypes = { 'alpha', 'neo-tree' },
-        always_divide_middle = true,
       },
       sections = {
-        lualine_a = { mode },
-        lualine_b = { 'branch' },
-        lualine_c = { filename },
-        lualine_x = { diagnostics, diff, { 'encoding', cond = hide_in_width }, { 'filetype', cond = hide_in_width } },
-        lualine_y = { 'location' },
-        lualine_z = { 'progress' },
+        lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
+        lualine_b = { filename, 'branch' },
+        lualine_c = { diagnostics },
+        lualine_x = { diff },
+        lualine_y = { 'filetype', 'progress' },
+        lualine_z = {
+          { 'location', separator = { right = '' }, left_padding = 2 },
+        },
       },
       inactive_sections = {
-        lualine_a = {},
+        lualine_a = { 'filename' },
         lualine_b = {},
-        lualine_c = { { 'filename', path = 1 } },
-        lualine_x = { { 'location', padding = 0 } },
+        lualine_c = {},
+        lualine_x = {},
         lualine_y = {},
-        lualine_z = {},
+        lualine_z = { 'location' },
       },
       tabline = {},
-      extensions = { 'fugitive' },
+      extensions = {},
     }
   end,
 }
